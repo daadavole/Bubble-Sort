@@ -34,18 +34,13 @@ namespace Bubble_Sort
                 swap = false;
                 for (int i = 0; i < list.Count; i++)
                 {
-                    if (i + 1 < list.Count)
+                    if (i + 1 < list.Count && list[i] > list[i + 1])
                     {
-                        if (list[i] > list[i + 1])
-                        {
-                            // Swap values at index i and i + 1
-                            int holder = list[i + 1];
-                            list[i + 1] = list[i];
-                            list[i] = holder;
-                            swap = true;
-                            // Can be used for better visualisation
-                            //PrintList(list);
-                        }
+                        // Swap values at index i and i + 1
+                        int holder = list[i + 1];
+                        list[i + 1] = list[i];
+                        list[i] = holder;
+                        swap = true;
                     }
                 }
             } while (swap);
