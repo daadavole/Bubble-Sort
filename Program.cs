@@ -28,23 +28,20 @@ namespace Bubble_Sort
         }
         static List<int> BubbleSort(List<int> list)
         {
-            bool swap;
-            do
+            for (int i = 0; i < list.Count; i++)
             {
-                swap = false;
-                for (int i = 0; i < list.Count; i++)
+                for (int j = 0; j < list.Count - 1; j++)
                 {
-                    if (i + 1 < list.Count && list[i] > list[i + 1])
+                    if (list[j] > list[j + 1])
                     {
                         // Swap values at index i and i + 1
-                        int holder = list[i + 1];
-                        list[i + 1] = list[i];
-                        list[i] = holder;
-                        swap = true;
+                        int holder = list[j + 1];
+                        list[j + 1] = list[j];
+                        list[j] = holder;
+                        PrintList(list);
                     }
                 }
-            } while (swap);
-
+            }
             return list;
         }
     }
