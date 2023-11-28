@@ -10,8 +10,8 @@ namespace Bubble_Sort
     {
         static void Main()
         {
-            List<int> list = new List<int> { 2, 8, 5, 3, 9, 4, 1}; 
-            Console.WriteLine("Starting list: ");
+            List<int> list = new List<int> { 2, 8, 5, 3, 9, 4, 1, 1, 0, 15}; 
+            Console.WriteLine("Unsorted list: ");
             PrintList(list);
             Console.WriteLine("Sorted list: ");
             PrintList(BubbleSort(list));
@@ -38,7 +38,6 @@ namespace Bubble_Sort
                         int holder = list[j + 1];
                         list[j + 1] = list[j];
                         list[j] = holder;
-                        PrintList(list);
                     }
                 }
             }
